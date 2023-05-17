@@ -24,10 +24,5 @@ public class Student extends Object {
 		Student s1 = new Student("Maria Müller");
 		Student s2 = new Student("Stefan Schmidt");
 		Student s3 = new Student("Maria Müller");
-		System.out.println(s1 == s2); // false
-		System.out.println(s1 == s3); // false
-		System.out.println(s1.equals(s2)); // false
-		System.out.println(s1.equals(s3)); // true
-
 	}
 }

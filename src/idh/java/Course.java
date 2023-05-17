@@ -59,27 +59,7 @@ public class Course implements Iterable<Student> {
 	public static void main(String[] args) throws Exception {
 		NameGenerator ng = new NameGenerator();
 		
-		Queue<Student> warteschlange = new LinkedList<Student>();
-		warteschlange.add(new Student(ng.getName()));
-		warteschlange.add(new Student(ng.getName()));
-		warteschlange.add(new Student(ng.getName()));
-		warteschlange.add(new Student(ng.getName()));
-		warteschlange.add(new Student(ng.getName()));
-		warteschlange.add(new Student(ng.getName()));
-		
-		for (Student s : warteschlange) {
-			System.out.println(s);
-		}
-		
-		Course course = new Course("Java 2", 4);
-		course.addMember(warteschlange.remove());
-		course.addMember(warteschlange.remove());
-		course.addMember(warteschlange.remove());
-		course.addMember(warteschlange.remove());
-		
-		for (Student student : course) {
-			System.out.println(student);
-		}
+		// warteschlange
 		
 	}
 
