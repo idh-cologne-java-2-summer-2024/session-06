@@ -1,7 +1,5 @@
 package idh.java;
 
-import java.util.HashSet;
-
 public class Student extends Object {
 	String name;
 	int matrikelNummer;
@@ -20,10 +18,12 @@ public class Student extends Object {
 		this.matrikelNummer = mNum;
 	}
 
+	@Override
 	public String toString() {
 		return name;
 	}
 
+	@Override
 	public boolean equals(Object o) {
 		if (! (o instanceof Student))
 			return false;
@@ -31,28 +31,11 @@ public class Student extends Object {
 		return this.matrikelNummer == s.matrikelNummer;
 	}
 	
+	@Override
 	public int hashCode() {
 		return matrikelNummer;
 	}
 	
 	public static void main(String[] args) {
-		Student s1 = new Student("Maria Müller", 123);
-		Student s2 = new Student("Stefan Schmidt", 234);
-		Student s3 = new Student("Maria Müller", 123);
-		
-		System.out.println("MARIO".equalsIgnoreCase("mario"));
-		System.out.println(s1.equals(s2));
-		System.out.println(s1.equals(s3));
-		System.out.println(s1 == s2);
-		System.out.println(s1 == s3);
-		System.out.println(5 == 3);
-		System.out.println(5 == 5);
-		
-		HashSet<Student> studentGroup = new HashSet<Student>();
-		studentGroup.add(s1);
-		studentGroup.add(s2);
-		studentGroup.add(s3);
-		System.out.println(studentGroup);
-		
 	}
 }

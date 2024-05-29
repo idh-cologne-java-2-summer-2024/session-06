@@ -1,10 +1,6 @@
 package idh.java;
 
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Set;
 
 import idh.java.util.NameGenerator;
 
@@ -61,43 +57,8 @@ public class Course implements Iterable<Student> {
 	public static void main(String[] args) throws Exception {
 		NameGenerator ng = new NameGenerator();
 		
-		Queue<Student> warteschlange = new LinkedList<Student>();
-		Student s = new Student(ng.getName(), 0);
 		
-		warteschlange.add(s);
-		warteschlange.add(s);
-		warteschlange.add(s);
-		
-		Set<Student> studentSet = new HashSet<Student>();
-		studentSet.add(s);		
-		studentSet.add(s);
-		studentSet.add(s);
-		System.out.println(studentSet);
 
-		warteschlange.add(new Student(ng.getName(), 0));
-		warteschlange.add(new Student(ng.getName(), 0));
-		warteschlange.add(new Student(ng.getName(), 0));
-		warteschlange.add(new Student(ng.getName(), 0));
-		warteschlange.add(new Student(ng.getName(), 0));
-
-		System.out.println(warteschlange);
-		
-		Course course = new Course("Java 7", 30);
-		course.addMember(warteschlange.poll());
-		course.addMember(warteschlange.poll());
-		course.addMember(warteschlange.poll());
-		course.addMember(warteschlange.poll());
-		course.addMember(warteschlange.poll());
-		course.addMember(warteschlange.poll());
-		System.out.println(warteschlange.poll());
-
-//		System.out.println(warteschlange);
-//		
-//		System.out.println(course);
-//		for(Student s : course)
-//			System.out.println(s);
-
-		// warteschlange
 		
 	}
 
